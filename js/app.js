@@ -234,7 +234,7 @@ ButtonSubmit.addEventListener('click', (e) => {
     checkForms();
 
     let check = [...inputsNameItems].every(function(elem) {
-        if (elem.value) {
+        if (elem.value && !emailTest(inputEmail)) {
             return true;
         } else {
             return false;
